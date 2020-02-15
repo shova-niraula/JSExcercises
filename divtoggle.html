@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        #myDIV {
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            background-color: greenyellow;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<p>Click the button:</p>
+
+<button onclick="myFunction()">Click here!</button>
+
+<div id="myDIV">
+    This is a toggling div
+</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,1 +1,1 @@
-This is the collection of JS exercises.
+This is the collection of JS exercises
