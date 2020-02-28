@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic jQuery Events</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<h1> jQuery Events</h1>
+<input type="text">
+<button> Don't click Me</button>
+<button> Seriously don't click me</button>
+<button>This is your last warning!</button>
+
+<script>
+
+// $("h1").click(function(){
+// alert("h1 clicked");
+// });
+$("button").click(function(){
+   $(this) .css("background","pink");
+});
+$("input").keypress(function(event){
+    if(event.which === 13){
+        console.log("you hit enter");
+    };
+// );
+$("h1").on("click",function(){
+    $(this).css("color","purple");
+});
+});
+</script>
+</body>
+</html>

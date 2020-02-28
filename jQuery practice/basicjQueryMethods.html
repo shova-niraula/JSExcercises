@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic JQuery Methods</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style type="text/css">
+        .correct {
+            color: green;
+        }
+
+        .wrong {
+            color : red;
+            background: pink;
+        }
+        .done{
+            color : gray;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+<h1>jQuery Basic Methods Demo</h1>
+<input type="text" placeholder="Your Name">
+<ul>
+    <li>Starbust</li>
+    <li>Twix</li>
+    <li>Skitties</li>
+    <img src="https://www.burtchworks.com/wp-content/uploads/2019/01/snhu_logo-300x183.jpg" alt="">
+</ul>
+<script>
+    // 1. text() method example:
+    $("li:first").text("Orange Candy");
+    // 2. html() is a replacement of innerHTML of vanilla js
+    $("h1").html("Basic Jquery Methods learning");
+    //3. attr() is to retrieve the value of an attribute
+     $("img").attr("width","200px");
+     //val method extracts the value from input
+    $("input").val("Shova Niraula");
+    // addClass()
+     $("h1").addClass("correct");
+     $("li").addClass("wrong");
+    // removeClass()
+    $("h1").removeClass("correct");
+    //toggleClass()
+    $("li").toggleClass("wrong");
+</script>
+</body>
+</html>
