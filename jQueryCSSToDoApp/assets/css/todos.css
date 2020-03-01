@@ -24,17 +24,17 @@ ul{
 }
 span {
     height: 40px;
-    margin-left: 0;
     margin-right: 10px;
     text-align: left;
     width: 0;
     display: none;
 
+
 }
 li:hover span {
     width: 10px;
-    transition-delay: 10ms;
     display: inline-block;
+    transition: 0.2s linear;
 
 }
 input{
@@ -68,6 +68,6 @@ li:nth-child(2n){
 
 }
 .fa-trash {
-    color: blue;
-    margin-left: 0;
+    color:red;
+
 }
