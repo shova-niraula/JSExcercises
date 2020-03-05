@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Api Calls Example</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<table id="table1" border="1">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+
+</table>
+
+<script>
+    loadData();
+
+    function deleteRecordById(id) {
+
+    }
+
+    /**
+     * Get data from an api
+     */
+    function loadData() {
+        $.getJSON("https://arun-express-api.herokuapp.com/posts", function (data) {
+            data.forEach((d) => {
+                $('#table1').append('<tr><td>' + d._id + '</td><td>' + d.title + '</td><td>' +
+                    d.description + '</td><td> <button type="submit">Delete</button></td></tr>');
+
+            })
+        });
+
+    }
+
+</script>
+</body>
+
+</html>
