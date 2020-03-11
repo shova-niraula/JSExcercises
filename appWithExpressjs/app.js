@@ -13,13 +13,23 @@ app.get("/bye",function(req,res){
 });
 //"/dog" =>"bhow"
 app.get("/dog",function(req,res){
-    res.send("bhow")
+    res.send("bhow");
     console.log("someone has send get request to /dog");
 });
+
+app.get("/r/:subpage",function(req,res){
+    let subpage = req.params.subpage;
+    res.send("welcome to the " +subpage.toUpperCase() + " page");
+});
+app.get("*",function(req,res) {
+    res.send("Page not available");
+});
+
 //tell express to listen for request
 app.listen(3000,function(){
     console.log("Server listening on port 3000");
 });
+
 // app.get('/', function (req, res) {
 //     res.send('Sample endpoint ' + req.params.id);
 // });
