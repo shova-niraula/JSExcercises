@@ -1,0 +1,8 @@
+<h1> SNHU Recent News</h1>
+<% posts.forEach( function (post) { %>
+    <li> <%= post.title + "," %> by
+        <strong>
+            <%=post.author %>
+        </strong>
+    </li>
+<% }) %>
