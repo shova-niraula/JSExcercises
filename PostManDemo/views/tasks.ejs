@@ -1,0 +1,9 @@
+<h1> Tasks to do</h1>
+<% tasks.forEach(function(task){ %>
+<li> <%= task %> </li>
+ <% }); %>
+<br>
+<form action="/addTasks" method="POST">
+<input type ="text" name="newtask" placeholder="new task">
+<button> Add new Task</button>
+</form>
